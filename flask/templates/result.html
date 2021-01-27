@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <link rel= "stylesheet" type= "text/css"
+          href= "{{ url_for('static',filename='css/test.css') }}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>体に点数をつけるアプリケーション</title>
+  </head>
+  <body>
+    <header>
+      <h1>あなたの体に点数をつけます</h1>
+    </header>
+    <div class="contents">
+      <h1>結果</h1>
+      <h2>体型 : {{body_shape}}</h2>
+      <h2>点数 : {{body_score}}点</h2>
+      <a href="/">悔しいからもう一回撮影して確認する</a>
+    </div>
+
+  </body>
+</html>
