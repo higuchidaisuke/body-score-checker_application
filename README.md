@@ -1,4 +1,4 @@
-# body-score-checker_application
+# body-score-checker
 ## 概要
 これは私が作成した上半身に点数をつけるアプリケーションのソースコードです。<br>
 以下URL<br>
