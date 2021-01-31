@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <link rel= "stylesheet" type= "text/css"
+          href= "{{ url_for('static',filename='css/test.css') }}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>体に点数をつけるアプリケーション</title>
+  </head>
+  <body>
+    <header>
+      <h1>あなたの体に点数をつけます</h1>
+    </header>
+    <div class="contents">
+      <h1>あなたの体って何点か気になりませんか？</h1>
+      <h2>このアプリケーションの概要</h2>
+      <p>
+        このアプリケーションは、画像認識モデルをCNNを作成し、それを元にあなたの上半身に点数をつけるものです。
+      </p>
+
+      <h2>写真の条件</h2>
+      <p>
+        ・ファイル形式は、jpeg, jpg, png　です<br>
+        ・正面を向いて、上半身の画像を撮影してください(以下の画像を参照)<br>
+        ・顔は映らないようにしてください
+
+      </p>
+      <figure>
+        <img src="static/images/sample_image.jpg">
+      </figure>
+      <form action="/result" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/png, image/jpeg, image/jpg" required="required">
+        <button type="submit">submit</button>
+      </form>
+    </div>
+    <footer></footer>
+  </body>
+</html>
